@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert</title>
+</head>
+
+<body>
+  <h1>Alert Test</h1>
+  <button onclick={ShowAlert()}>Clicked for Alert</button>
+  <!-- <button id="button">Clicked for Alert</button> -->
+  <!-- <button onmouseover={ShowAlert()}>Clicked for Alert</button> -->
+  <!-- <button onmouseout={ShowAlert()}>Clicked for Alert</button> -->
+  <script>
+    const ShowAlert = () => {
+      alert('Your alert has been clicked');
+      console.log('clicked successfully');
+    };
+
+    // document.querySelector('#button').addEventListener('click', ShowAlert);
+    // document.querySelector('#button').onclick = function(){
+    //   alert('Your alert has been clicked');
+    //   console.log('clicked successfully');
+    // };
+    // document.querySelector('#button').onmouseover = ShowAlert;
+    // document.querySelector('#button').onmouseout = ShowAlert;
+
+  </script>
+</body>
+
+</html>

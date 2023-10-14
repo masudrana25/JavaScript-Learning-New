@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>change event</title>
+</head>
+
+<body>
+  <h1 id="h1-text">change event</h1>
+  <input type="text" id="input" placeholder="Enter Your Name">
+  <input type="text" id="input" placeholder="Enter Your Email">
+  <button type="submit" id="submit">Submit</button><br><br>
+  <img id="image" src="./Screenshot_1.png" alt="">
+  <!-- 
+    //change handle
+  <script>
+    const input = document.querySelectorAll('#input'); // 2ta input nodelist akarey input variable a save hobey.
+    input[0].addEventListener('change', function (event) {
+      console.log(event.target.value);
+    })
+  </script> -->
+  <script>
+    const input_Items = document.querySelectorAll('#input');
+    const buttonSubmit = document.querySelector('#submit');
+    buttonSubmit.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (input_Items[0].value === '' || input_Items[1].value === '') {
+        alert('Please enter the input value');
+      } else {
+        const name = input_Items[0].value;
+        const email = input_Items[1].value;
+        console.log('Your Name : ' + name + ' and Your Email : ' + email);
+      }
+    });
+    window.addEventListener('load', function () {
+      console.log('Browser Loaded Successfully');
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('HTML Content Loaded Successfully');
+    });
+    document.querySelector('#image').addEventListener('load', function () {
+      console.log('image loaded successfully');
+    })
+  </script>
+</body>
+
+</html>
