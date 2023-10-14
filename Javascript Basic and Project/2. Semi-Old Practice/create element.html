@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Element</title>
+  <style>
+    .box {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> Testing Create Element</h1>
+  <div>
+    <div class="box">
+      <h1 id="box-1">
+        <p>box-01 { Reference Element }</p>
+      </h1>
+    </div>
+    <br><br><br>
+    <div class="box">
+      <h1 id="box-2"> box-02 { Reference Element } </h1>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const paragraphElement = document.createElement('p');
+  paragraphElement.textContent = ' afterbegin paragraph ';
+
+  //abd or remove class in any html tag
+  paragraphElement.classList.add('p-class');
+  paragraphElement.classList.add('p-class-2');
+  paragraphElement.classList.remove('p-class');
+
+  // Attributes add or remove or modify 
+  paragraphElement.setAttribute('data-attr', 'p-attribute');
+  paragraphElement.setAttribute('data-attr-2', 'p-attribute-2');
+  paragraphElement.removeAttribute('data-attr');
+  paragraphElement.setAttribute('data-attr-3', 'p-attribute-3');
+  paragraphElement.setAttribute('data-attr-2', 'p-attribute-222');
+
+  // add or remove style 
+  paragraphElement.style.backgroundColor = 'black';
+  paragraphElement.style.color = 'white';
+  paragraphElement.style.alignItems = 'center';
+  paragraphElement.style.padding = '10px';
+  paragraphElement.style.margin = '10px';
+  //remove style
+  paragraphElement.style.alignItems = '';
+  //modify style
+  paragraphElement.style.margin = '20px';
+
+  console.log(paragraphElement);
+
+  const newDiv = document.createElement('div');
+  newDiv.innerHTML = `
+  <h1>  beforeend element</h1>
+  <h2> h2 element under newDiv. </h2>
+  <p> This is a Paragraph element under the div element. It is created by newDiv.InnerHTML command. </p>
+  `;
+  newDiv.classList.add('div-class');
+  console.log(newDiv);
+
+  const h1Create = document.createElement('h1');
+  h1Create.innerText = ' h1 create by "document.createElement("h1")" ';
+
+  h1Create.classList.add('h1-class');
+  console.log(h1Create);
+
+  const createList = document.createElement('ul');
+  createList.innerHTML = `
+  <li> one </li>
+  <li> two </li>
+  <li> three </li>
+  <li> four </li>
+  <li> five </li>
+    `;
+  console.log(createList);
+
+  // Elements push
+
+  const box_1 = document.querySelector('#box-1');
+  const box_2 = document.querySelector('#box-2');
+  const box_1_p = document.querySelector('#box-1>p');
+
+  box_1.insertAdjacentElement('beforebegin', h1Create);
+  box_1.insertAdjacentElement('afterbegin', paragraphElement);
+  box_1.insertAdjacentElement('beforeend', newDiv);
+  box_1.insertAdjacentElement('afterend', createList);
+
+
+
+</script>
+
+</html>
