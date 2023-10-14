@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="total">
+    <div class="text-div">
+      <h1>Welcome to My Click Game</h1>
+      <h6>If you want to win the Game, Click 10 times in the 'Click' button within two(2) sec. Best of
+        Luck.</h6>
+    </div>
+    <h1 id="count-text">0</h1>
+    <div id="ssss">
+      <button type="button" name="start" id="start">START</button>
+      <button type="button" name="click" id="click" disabled="true">CLICK</button>
+    </div>
+    <h2 id="result"></h2>
+    <h6>All Rights Reserves : @<span><a href="https://www.facebook.com/masudrana25120" target="_blank"> Md. Masud Rana</a></span></h6>
+  </div>
+
+  <script>
+    const count_text = document.querySelector('#count-text');
+    const start = document.querySelector('#start');
+    const click = document.querySelector('#click');
+    const result = document.querySelector('#result');
+
+    start.addEventListener('click', function () {
+      count_text.textContent = 0;
+      result.textContent = '';
+      click.removeAttribute('disabled');
+      setTimeout(() => {
+        Start();
+      }, 2000);
+    });
+
+    const Start = () => {
+      const count = parseFloat(count_text.textContent);
+      if (count > 10) {
+        result.textContent = ' Congratulations! You Win';
+      } else {
+        result.textContent = 'Sorry! You Loss';
+      };
+      click.setAttribute('disabled', true);
+    };
+
+    click.addEventListener('click', function () {
+      count_text.textContent = parseFloat(count_text.textContent) + 1;
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+
+body {
+  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: whitesmoke;
+  align-items: center;
+  background: #8E2DE2;
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+}
+
+#ssss {
+  display: flex;
+  justify-content: center;
+}
+
+#click {
+  margin-left: 20px;
+}
+
+.total {
+  text-align: center;
+}
+
+.text-div{
+  border: 1px solid bisque;
+  border-radius: 30px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+
+button[name=start] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+button[name=click] {
+  background-color: #F44336;
+  color: #fff;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  background-color: #9E9E9E;
+}
+
+#count-text{
+  font-size: 108px;
+  font-weight: bold;
+  color: #FFEB3B;
+}
+
+h6 a{
+  text-decoration: none;
+  color: wheat;
+}
+h6 a:hover{
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: underline;
+}
