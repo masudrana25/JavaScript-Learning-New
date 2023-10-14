@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handle or Management </title>
+</head>
+<body>
+    <h1>This is Event HANDLE Section </h1>
+    <button onclick="alert(47)">Click Here 1</button>
+    <button onclick="alert('You cannot enter into this site. To enter this page, you need permission of the owner of this site')">Click Here 2</button>
+    <button onclick="EventHandler3()">Click Here 3</button>
+    <button onclick="EventHandler4()">Click Here 4</button>
+    <button onmouseover="EventHandler5()">Click Here 5</button>
+    <button id="6_button">  Click Here 6  </button><br><br>
+    <button id="7_button"> Click Here 7  </button>
+    <button id="8_button">  Click Here 8  </button>
+    <script>
+        function EventHandler3(){
+            document.body.style.color= 'white';
+            document.body.style.backgroundColor= 'red';
+        }
+        function EventHandler4(){
+            document.body.style.color= 'white';
+            document.body.style.backgroundColor= 'red';
+        }
+        function EventHandler5(){
+            document.body.style.color= 'white';
+            document.body.style.backgroundColor= 'red';
+        }
+        
+    </script>
+    <script>
+        var six=document.getElementById('6_button');
+        six.onclick= function (){
+            document.body.style.color= 'white';
+            document.body.style.backgroundColor= 'red';
+        }
+    </script>
+    <script>
+        var seven=document.getElementById('7_button');
+        seven.addEventListener('click', sevenButton);
+        function sevenButton(){
+            document.body.style.color= 'white';
+            document.body.style.backgroundColor= 'red';
+        }
+    </script>
+    <script>
+        var eight=document.getElementById('8_button');
+        eight.addEventListener('click', function(){
+            //alert('eight Button is Clicked by anyone')
+            document.body.style.color= 'white';
+            document.body.style.backgroundColor= 'red';
+        });
+    </script>
+</body>
+</html>
