@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX, load API data</title>
+</head>
+
+<body>
+  <h1>AJAX - load API data</h1>
+  <button id="button-load-data">Load Data</button>
+  <ul id="ul">
+
+  </ul>
+
+  <script>
+    const load_button = document.querySelector('#button-load-data');
+    const ul = document.querySelector('#ul');
+
+    load_button.addEventListener('click', function () {
+      let request = new XMLHttpRequest();
+      request.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
+      request.send();
+      request.onreadystatechange = function handleRequest() {
+        if (request.readyState === 4 && request.status === 200) {
+          const data = JSON.parse(request.responseText);
+          data.forEach(element => {
+            const li = document.createElement('li');
+            li.innerHTML = `${element.title}`;
+            ul.appendChild(li);
+          });
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

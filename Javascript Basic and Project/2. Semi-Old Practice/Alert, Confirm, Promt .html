@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert, Confirm, Prompt </title>
+</head>
+<body>
+  <h1> use of Alert, Confirm, Prompt </h1>
+
+  <h4 id="alert">Click for Alert</h4>
+  <h4 id="confirm">Click for confirm</h4>
+  <h4 id="prompt">Click for prompt</h4>
+
+  <script>
+    document.getElementById("alert").addEventListener("click",function(){
+      alert(" your are clicked in alert text");
+    })
+
+    document.getElementById("confirm").addEventListener("click",function(){
+      confirm(" your are clicked in confirm text");
+    })
+
+    document.getElementById("prompt").addEventListener("click",function(){
+      prompt(" your are clicked in prompt text");
+    })
+  </script>
+
+</body>
+</html>
