@@ -1,0 +1,9 @@
+var Name='Masud';
+var id=1916028;
+var Bulean1 = true;
+var Bulean2 = false;
+
+console.log(typeof id);
+console.log(typeof Name);
+console.log(typeof Bulean1);
+console.log(typeof Bulean2);

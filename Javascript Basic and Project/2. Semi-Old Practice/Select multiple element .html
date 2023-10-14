@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by Class</title>
+</head>
+
+<body>
+  <div>
+    <h1>Select by Class Practice</h1>
+    <div id="name">
+      <h4> h4 Children</h4>
+      <p>p children</p>
+      <div id="second-child">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum at optio porro voluptatum? Natus ad quae
+          molestiae officiis quia eius omnis cum nam expedita nobis! Eos enim magnam illo ipsa?</p>
+        <li>one</li>
+        <li>two</li>
+      </div>
+      <div class="third-child">
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eveniet cumque est blanditiis dicta
+            architecto, doloremque quod error delectus numquam. Fugit pariatur recusandae nulla rem minus repellat
+            aliquid rerum porro!</span></p>
+        <li>
+          oooo
+        </li>
+        <li> gooooo</li>
+      </div>
+      <ul class="ul-class">
+        <li class="person">Person 1</li>
+        <li class="person">Person 2</li>
+        <li class="person_p">Person 3</li>
+        <li class="person_p">Person 4</li>
+        <li class="person_p">Person 5</li>
+      </ul>
+      <strong>Strong children</strong>
+    </div>
+  </div>
+  <script>
+    
+    // select multiple children from parrent elements 
+    const multiple_Item = document.querySelectorAll(' #second-child p , .third-child p, .ul-class li:last-child , .ul-class li:first-child, #name h4');
+    console.log(multiple_Item);
+  </script>
+</body>
+
+</html>

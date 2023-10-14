@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by ID</title>
+</head>
+<body>
+  <div>
+    <h1>Select by ID Practice</h1>
+    <div id="name">
+      <ul>
+        <li id="person-1">Person 1</li>
+        <li id="person-2">Person 2</li>
+        <li id="person-3">Person 3</li>
+        <li id="person-4">Person 4</li>
+        <li id="person-5">Person 5</li>
+      </ul>
+      </div>
+  </div>
+  <script>
+    // By querySelector
+    const person_1 = document.querySelector('#person-1');
+    const text_1 = person_1.innerText;
+    person_1.innerHTML = ` ${text_1} <h1> This is modified by "document.querySelector('#person-1')"  </h1>`;
+
+    // By getElementById 
+    const person_2 = document.getElementById('person-2');
+    const text_2 = person_2.innerText;
+    person_2.innerHTML = `${text_2} <h1> This is modified by "document.getElementById('person-2')" </h1>`
+
+  </script>
+</body>
+</html>

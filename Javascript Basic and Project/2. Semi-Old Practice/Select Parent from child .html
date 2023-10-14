@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Parent From Child</title>
+</head>
+
+<body id="1st-child">
+  <div>
+    <h1>Select Parent From Child</h1>
+  </div>
+
+  <div id="2nd-child">
+    <h1>2nd child</h1>
+    <div id="3rd-child">
+      <h1>3rd child</h1>
+      <div id="4th-child">
+        <h1>4th child</h1>
+        <div id="5th-child">
+          <h1>5th child</h1>
+          <div id="6th-child">
+            <h1>6th child</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sixChild = document.getElementById('6th-child');
+    console.log(sixChild);
+    
+    // const fifthParent = sixChild.parentElement;
+    const fifthParent = sixChild.parentElement;
+    console.log(fifthParent);
+    
+    // const fourthParent = fifthParent.parentElement;
+    const fourthParent = sixChild.parentElement.parentElement;
+    console.log(fourthParent);
+
+    // const thirdParent = fourthParent.parentElement;
+    const thirdParent = sixChild.parentElement.parentElement.parentElement;
+    console.log(thirdParent);
+
+    // const secondParent = thirdParent.parentElement;
+    const secondParent = sixChild.parentElement.parentElement.parentElement.parentElement;
+    console.log(secondParent);
+
+    // const firstParent = secondParent.parentElement;
+    const firstParent = sixChild.parentElement.parentElement.parentElement.parentElement.parentElement;
+    console.log(firstParent);
+
+    //const seventhParent = firstParent.parentElement;
+    const zeroParent = sixChild.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    console.log(zeroParent);
+
+    // const minus_oneParent = zeroParent.parentElement;
+    const minus_oneParent = sixChild.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    console.log(minus_oneParent);
+  </script>
+</body>
+
+</html>

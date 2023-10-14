@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by Class</title>
+</head>
+
+<body>
+  <div>
+    <h1>Select by Class Practice</h1>
+    <div id="name">
+      <h4> h4 Children</h4>
+      <p>p children</p>
+      <div id="second-child">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum at optio porro voluptatum? Natus ad quae
+          molestiae officiis quia eius omnis cum nam expedita nobis! Eos enim magnam illo ipsa?</p>
+        <li>one</li>
+        <li>two</li>
+      </div>
+      <div class="third-child">
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eveniet cumque est blanditiis dicta
+            architecto, doloremque quod error delectus numquam. Fugit pariatur recusandae nulla rem minus repellat
+            aliquid rerum porro!</span></p>
+        <li>
+          oooo
+        </li>
+        <li> gooooo</li>
+      </div>
+      <ul>
+        <li class="person">Person 1</li>
+        <li class="person">Person 2</li>
+        <li class="person_p">Person 3</li>
+        <li class="person_p">Person 4</li>
+        <li class="person_p">Person 5</li>
+      </ul>
+      <strong>Strong children</strong>
+    </div>
+  </div>
+  <script>
+    const parrentElement = document.getElementById('name');
+    console.log(parrentElement);
+    console.log(parrentElement.children);
+    console.log(parrentElement.childNodes);
+    console.log(parrentElement.children[2].children);
+
+    const second_childs_child_li_item = document.querySelectorAll('#second-child li');
+    console.log(second_childs_child_li_item);
+
+    // select multiple children from parrent elements 
+    const othersItem = document.querySelectorAll(' #second-child p , .third-child p');
+    console.log(othersItem);
+  </script>
+</body>
+
+</html>

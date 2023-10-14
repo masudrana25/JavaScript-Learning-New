@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by Class</title>
+</head>
+
+<body>
+  <div>
+    <h1>Select by Class Practice</h1>
+    <div class="name">
+      <ul>
+        <li class="person">Person 1</li>
+        <li class="person">Person 2</li>
+        <li class="person_p">Person 3</li>
+        <li class="person_p">Person 4</li>
+        <li class="person_p">Person 5</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // By querySelector
+    const person_1 = document.querySelector('.person');
+    const text_1 = person_1.innerText;
+    person_1.innerHTML = ` ${text_1} <h1> This is modified by "document.querySelector('.person')"  </h1>`;
+
+    const person_p = document.querySelectorAll('.person_p');
+    console.log(person_p);
+    const array_person_p = Array.prototype.slice.call(person_p);
+    console.log(array_person_p);
+    
+    // By getElementByclass 
+    const person_pp = document.getElementsByClassName('person_p');
+    console.log(person_pp);
+    const array_person_pp = Array.prototype.slice.call(person_pp);
+    console.log(array_person_pp);
+   
+  </script>
+</body>
+
+</html>

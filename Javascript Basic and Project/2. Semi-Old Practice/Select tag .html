@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by Tag Name </title>
+</head>
+<body>
+  <h1>Select by Tag Name</h1>
+  <h2>ghbj</h2>
+  <div>
+    <p> Paragraph</p>
+    <li>cfgchg</li>
+    <h4> h4 item</h4>
+    <b>bolt item</b>
+  </div>
+
+  <script>
+    //select by tag name
+    const h1_tag = document.getElementsByTagName("h2");
+    console.log(h1_tag);
+    // h1_tag.innerHTML = ` <h2> h2 change by "document.getElementsByTagName("h1")" </h2> `;
+
+    // select by querySelectorAll
+    const p_h4_li = document.querySelectorAll('p, li,h4');
+    console.log(p_h4_li);
+    const array_p_h4_li = Array.prototype.slice.call(p_h4_li);
+    console.log(array_p_h4_li);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by Class</title>
+</head>
+
+<body>
+  <div>
+    <h1>Select by Class Practice</h1>
+    <div class="name">
+      <ul>
+        <li class="person">Person 1</li>
+        <li class="person">Person 2</li>
+        <li class="person_p">Person 3</li>
+        <li class="person_p">Person 4</li>
+        <li class="person_p">Person 5</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const firstChild = document.querySelector('li:first-child');
+    firstChild.innerHTML = `<h1> Person 1 --Changed by "document.querySelector('li:first-child')" </h1>`
+    console.log(firstChild);
+
+    const firstAndLastChild = document.querySelectorAll('li:first-child, li:last-child');
+    console.log(firstAndLastChild);
+    const firstAndLastChild_array = Array.prototype.slice.call(firstAndLastChild);
+    console.log(firstAndLastChild_array);
+  </script>
+</body>
+
+</html>
