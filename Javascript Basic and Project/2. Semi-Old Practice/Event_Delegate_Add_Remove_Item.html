@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegate</title>
+</head>
+<body>
+    <div>
+        <ul id="ItemParenet">
+            <li class="item">list-1</li>
+            <li class="item">list-2</li>
+            <li class="item">list-3</li>
+            <li class="item">list-4</li>
+            
+        </ul>
+        <button id="addNew">add new item</button>
+    </div>
+
+
+    <script>
+        // var item = document.getElementsByClassName('item');
+        // for (let i = 0; i < item.length; i++) {
+        //     var ItemList = item[i];
+        //     ItemList.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        document.getElementById('ItemParenet').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        document.getElementById('addNew').addEventListener('click',function(event){
+            var ItemParenet =document.getElementById("ItemParenet");
+            var NewItem = document.createElement('li');
+            NewItem.innerText='Brand New Item.';
+            ItemParenet.appendChild(NewItem);
+        })
+    </script>
+</body>
+</html>

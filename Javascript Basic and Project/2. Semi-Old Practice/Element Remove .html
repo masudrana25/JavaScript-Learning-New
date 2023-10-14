@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Remove</title>
+  <style>
+    .box {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Element Remove</h1>
+  <div>
+    <div class="box" id="wwwww">
+      <p id="box-1">
+        <h1>box-01 { Reference Element }</h1>
+        <h2 id="box_1_h2"> h2 under box-1</h2>
+        <h3 id="box_1_h3"> h3 under box-1</h3>
+        <h4> h4 under box-1</h4>
+        <h5 id="h5-under-box-1"> h5 under box-1</h5>
+        <h6> h6 under box-1</h6>
+      </p>
+      <p id="qqqq">
+        wuofghwfuwfu
+      </p>
+    </div>
+    <br><br><br>
+    <div class="box" id="eeeee">
+      <p id="box-2">
+        <h1>box-02 { Reference Element }</h1>
+        <h2> h2 under box-2</h2>
+        <h3> h3 under box-2</h3>
+        <h4> h4 under box-2</h4>
+        <h5> h5 under box-2</h5>
+        <h6> h6 under box-2</h6>
+      </p>
+    </div>
+  </div>
+
+  <script>
+  const box_2 = document.getElementById('eeeee');
+  console.log(box_2.childNodes[4]);
+  box_2.childNodes[4].remove();
+  console.log(box_2.childNodes[5]);
+  box_2.childNodes[5].remove();
+
+  // sora-sori remove
+  document.getElementById('box_1_h2').remove();
+  document.getElementById('box_1_h3').remove();
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Position Change </title>
+  <style>
+    .box {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Element Position Change</h1>
+  <div>
+    <div class="box" id="box-1">
+      <h1 id="box_1_h1"> h1 under box-1</h1>
+      <h2 id="box_1_h2"> h2 under box-1</h2>
+      <h3 id="box_1_h3"> h3 under box-1</h3>
+      <h4 id="box_1_h4"> h4 under box-1</h4>
+      <h5 id="box_1_h5"> h5 under box-1</h5>
+      <h6 id="box_1_h6"> h6 under box-1</h6>
+    </div>
+    <br><br><br>
+    <div class="box" id="box-2">
+      <h1 id="box_2_h1">h1 under box-2</h1>
+      <h2 id="box_2_h2"> h2 under box-2</h2>
+      <h3 id="box_2_h3"> h3 under box-2</h3>
+      <h4 id="box_2_h4"> h4 under box-2</h4>
+      <h5 id="box_2_h5"> h5 under box-2</h5>
+      <h6 id="box_2_h6"> h6 under box-2</h6>
+    </div>
+  </div>
+
+  <script>
+    const selectElement = (id) => {
+      return document.getElementById(id);
+    };
+
+    const box_1_h1 = selectElement('box_1_h1');
+    const box_1_h2 = selectElement('box_1_h2');
+    const box_1_h3 = selectElement('box_1_h3');
+    const box_1_h4 = selectElement('box_1_h4');
+    const box_1_h5 = selectElement('box_1_h5');
+    const box_1_h6 = selectElement('box_1_h6');
+    console.log(box_1_h1);
+    const box_2_h1 = selectElement('box_2_h1');
+    const box_2_h2 = selectElement('box_2_h2');
+    const box_2_h3 = selectElement('box_2_h3');
+    const box_2_h4 = selectElement('box_2_h4');
+    const box_2_h5 = selectElement('box_2_h5');
+    const box_2_h6 = selectElement('box_2_h6');
+
+    //add before any element
+    const box_1 = selectElement('box-1');
+    // box_1.insertBefore(box_2_h1, box_1_h1);
+    // box_1.insertBefore(box_2_h2, box_1_h2);
+    // box_1.insertBefore(box_2_h3, box_1_h3);
+    // box_1.insertBefore(box_2_h4, box_1_h4);
+    // box_1.insertBefore(box_2_h5, box_1_h5);
+    // box_1.insertBefore(box_2_h6, box_1_h6);
+
+    // add after any element
+    // // apendchild position change  = nichey add hobey but ai khetrey font size change hoye jai kichuta
+    // box_1_h1.appendChild(box_2_h1);
+    // box_1_h2.appendChild(box_2_h2);
+    // box_1_h3.appendChild(box_2_h3);
+    // box_1_h4.appendChild(box_2_h4);
+    // box_1_h5.appendChild(box_2_h5);
+    // box_1_h6.appendChild(box_2_h6);
+
+  </script>
+</body>
+
+</html>

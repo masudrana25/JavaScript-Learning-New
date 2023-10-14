@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble </title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="list"> list 1</h1>
+        <ul id="ul">
+            <li id="items-1">Item-1</li>
+            <li id="items-2">Item-2</li>
+            <li id="items-3">Item-3</li>
+            <li id="items-4">Item-4</li>
+            <li id="items-5">Item-5</li>
+        </ul>
+
+    </div>
+
+    <div id="container2">
+        <h1 id="list2"> LisT 2 </h1>
+        <ul id="ul-2">
+            <li id="items-a">Item-a</li>
+            <li id="items-b">Item-b</li>
+            <li id="items-c">Item-c</li>
+            <li id="items-d">Item-d</li>
+            <li id="items-e">Item-e</li>
+        </ul>
+
+    </div>
+
+    <div id="box-3">
+        <h1> box-3</h1>
+        <p> paragraph</p>
+        <h6> h6 text</h6>
+        <li>list-1</li>
+        <li> list-2</li>
+        <li>list-3</li>
+    </div>
+
+
+    <script> // event bubble without stop propagate
+        // j option/element ta ty click korbo , tar parent element  ta ty oo same event bubble kaj korbey.
+        //aita stop korty chailey "event.stopPropagation()" option ta add korey dity hobey , tailey oi element ar uporer parent element er kachy r bubble korbey na.
+
+        document.getElementById('container').addEventListener('click', function (event) {
+            console.log('container clicked');
+        })
+
+        document.getElementById('list').addEventListener('click', function (event) {
+            console.log('list clicked');
+        })
+
+        document.getElementById('ul').addEventListener('click', function (event) {
+            console.log('ul clicked');
+        })
+
+        document.getElementById('items-1').addEventListener('click', function (event) {
+            console.log('items-1 clicked');
+        })
+
+        document.getElementById('items-2').addEventListener('click', function (event) {
+            console.log('items-2 clicked');
+        })
+
+        document.getElementById('items-3').addEventListener('click', function (event) {
+            console.log('items-3 clicked');
+        })
+
+        document.getElementById('items-4').addEventListener('click', function (event) {
+            console.log('items-4 clicked');
+        })
+
+        document.getElementById('items-5').addEventListener('click', function (event) {
+            console.log('items-5 clicked');
+        })
+
+    </script>
+
+    <script> // event bubble with stop propagate
+        // j option/element ta ty click korbo , tar parent element  ta ty oo same event bubble kaj korbey.
+        //aita stop korty chailey "event.stopPropagation()" option ta add korey dity hobey , tailey oi element ar uporer parent element er kachy r bubble korbey na.
+
+        document.getElementById('container2').addEventListener('click', function (event) {
+            console.log('container2 clicked');
+        })
+
+        document.getElementById('list2').addEventListener('click', function (event) {
+            console.log('list2 clicked');
+            event.stopPropagation();
+        })
+
+
+        document.getElementById('ul-2').addEventListener('click', function (event) {
+            console.log('ul-2 clicked');
+            event.stopPropagation();
+        })
+
+        document.getElementById('items-a').addEventListener('click', function (event) {
+            console.log('items-a clicked');
+            event.stopPropagation();
+        })
+
+        document.getElementById('items-b').addEventListener('click', function (event) {
+            console.log('items-b clicked');
+            event.stopPropagation();
+        })
+
+        document.getElementById('items-c').addEventListener('click', function (event) {
+            console.log('items-c clicked');
+            event.stopPropagation();
+        })
+
+        document.getElementById('items-d').addEventListener('click', function (event) {
+            console.log('items-d clicked');
+            event.stopPropagation();
+        })
+
+        document.getElementById('items-e').addEventListener('click', function (event) {
+            console.log('items-e clicked');
+            event.stopPropagation();
+        })
+
+    </script>
+    <script>
+        document.getElementById('box-3').addEventListener('click', function (event) {
+            if (event.target.tagName === 'P') {
+                console.log('p text clicked');
+            };
+            if (event.target.tagName === 'LI') {
+                console.log('list items clicked');
+            };
+            if (event.target.tagName === 'H6') {
+                console.log('h6 text clicked');
+            }
+        })
+    </script>
+</body>
+
+</html>
