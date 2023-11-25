@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vowel or Consonant find out</title>
+</head>
+
+<body>
+
+
+  <script>
+    var latter_input = prompt("Enter a Letter : ");
+    var latter = latter_input.toLocaleLowerCase();
+
+    if (latter == "a" || latter == "e" || latter == "i" || latter == "o" || latter == "u") {
+      document.write(`<h1> "${latter_input}" is a vowel letter</h1>`);
+    }
+    else {
+      document.write(`<h1> "${latter_input}"  is a consonant letter</h1>`);
+    }
+
+  </script>
+
+</body>
+
+</html>
