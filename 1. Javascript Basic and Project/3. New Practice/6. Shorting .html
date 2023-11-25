@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting</title>
+</head>
+
+<body>
+  <script>
+
+    var array1 = ["masud", 'jibon', 'karim', 'adit'];
+    var array2 = ["Masud", 'Jibon', 'Karim', 'Adit'];
+    var array3 = [20, 23, 55, 7, 8, 9];
+
+
+    //String Shoring
+    array1.sort();
+    array2.sort();
+    document.write(`<h1>${array1}</h1>`);
+    document.write(`<h1>${array2}</h1>`);
+
+    //reverse sorting
+    array2.reverse();
+    document.write(`<h1>${array2}</h1>`);
+
+
+    
+    //Number sorting
+    // Normal sorting
+    array3.sort(function (a, b) {
+      return a - b;
+    });
+    document.write(`<h1>${array3}</h1>`);
+
+    // Reverse sorting
+    array3.sort(function (a, b) {
+      return b - a;
+    });
+    document.write(`<h1>${array3}</h1>`);
+
+
+  </script>
+</body>
+
+</html>
