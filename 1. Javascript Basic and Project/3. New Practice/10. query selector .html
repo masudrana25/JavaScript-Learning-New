@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Selector</title>
+</head>
+
+<body>
+
+  <p class="para1">This is first Paragraph.</p>
+  <p id="para2">This is first Paragraph.</p>
+  <h1>h1 html tag select by query selector</h1>
+  <div>
+    <p> paragraph under a div</p>
+  </div>
+  <div class="div1">
+    <p> paragraph under a div</p>
+  </div>
+  <div>
+    <div>
+      <p>paragraph under two div</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector(".para1").style.color = "red";
+    document.querySelector("#para2").style.fontSize = "30px";
+    document.querySelector("h1").style.color = "red";
+    document.querySelector("div p").style.color = "red";
+    document.querySelector(".div1 p").style.fontSize = "28px";
+    document.querySelector("div div p").style.color = "red";
+
+  </script>
+</body>
+
+</html>

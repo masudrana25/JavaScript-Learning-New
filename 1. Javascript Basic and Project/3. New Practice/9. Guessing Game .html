@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    let win = 0; let loss = 0;
+    for (let i = 0; i < 5; i++) {
+
+      let randomNumber = Math.ceil(Math.random() * 5);
+      let guessingNumber = parseInt(prompt("Guess a number from 1 to 5 for 5 times : "));
+
+      if (randomNumber === guessingNumber) {
+        win++;
+      }
+      else {
+        loss++;
+      }
+    }
+
+    document.write(`<h1> You Win ${win} times. </h1>`);
+    document.write(`<h1> You Loss ${loss} times. </h1>`);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Selector All</title>
+</head>
+
+<body>
+
+  <p>Paragraph-1</p>
+  <p>Paragraph-2</p>
+  <p>Paragraph-3</p>
+  <p>Paragraph-4</p>
+  <p>Paragraph-5</p>
+
+  <script>
+    document.querySelectorAll("p")[0].style.color = "red";
+    document.querySelectorAll("p")[2].style.color = "red";
+    document.querySelectorAll("p")[4].style.color = "red";
+
+    const p_list = document.querySelectorAll("p");
+    for (let i = 0, j = 20; i < p_list.length; i++) {
+      p_list[i].style.fontSize = `${j}px`;
+      j = j + 5;
+    };
+
+  </script>
+</body>
+
+</html>
