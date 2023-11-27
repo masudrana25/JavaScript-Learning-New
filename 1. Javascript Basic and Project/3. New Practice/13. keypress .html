@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keypress</title>
+</head>
+
+<body>
+  <h1 id="aaaa">You Press : </h1>
+
+
+  <script>
+    const aaaa = document.getElementById("aaaa");
+    const textIOld = aaaa.innerText;
+
+    document.addEventListener("keypress", (event) => {
+      const newText = event.key;
+      aaaa.innerText = textIOld + ' ' + newText;
+    });
+
+  </script>
+</body>
+
+</html>
