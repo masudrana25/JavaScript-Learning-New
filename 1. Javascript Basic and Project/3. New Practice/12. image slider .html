@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+</head>
+
+<body>
+  <div>
+    <button id="previousId" onclick="prevF()">Previous</button>
+    <img src="image/1.jpg" alt="" id="imageId" style="height: 300px; width: 300px;">
+    <button id="nextId" onclick="nextF()">Next</button>
+  </div>
+
+  <script>
+    const previousId = document.getElementById("previousId");
+    const imageId = document.getElementById("imageId");
+    const nextId = document.getElementById("nextId");
+
+    const photos = ["image/1.jpg", "image/2.jpg", "image/3.jpg"];
+
+    let count = 0;
+
+    const nextF = ()=> {
+      count++;
+      if (count >= photos.length) {
+        count = 0;
+      }
+      imageId.src = photos[count];
+    };
+
+    const prevF = () => {
+      count--;
+      if (count < 0) {
+        count = photos.length - 1;
+      }
+      imageId.src = photos[count];
+    }
+  </script>
+</body>
+
+</html>
